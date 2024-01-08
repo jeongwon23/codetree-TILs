@@ -8,7 +8,8 @@ void PrintLines(int n){
 
 
 int main() {
-    int num = 4;
+    int num;
+    scanf("%d",&num);
     PrintLines(num);
     return 0;
 }
