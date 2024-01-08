@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+void Print10Stars(){
+    for(int i=1;i<=10;i++){
+        printf("*");
+    }printf("\n");
+}
 int main() {
-    // 여기에 코드를 작성해주세요.
-    for(int i=1;i<=5;i++){
-        for(int j=1;j<=10;j++){
-            printf("*");
-        }printf("\n");
+    for(int j=1;j<=5;j++){
+       Print10Stars(); 
     }
     return 0;
 }
