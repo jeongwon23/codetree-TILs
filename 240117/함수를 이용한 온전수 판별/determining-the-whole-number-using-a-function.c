@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void Perfect(int num){
+int isPerfectNumber(int num) {
     if (num % 2 == 0) {
         return 0;
     }
@@ -16,18 +16,23 @@ void Perfect(int num){
     return 1;
 }
 
-void func(int a,int b){
-    for(int i=a;i<=b;i++){
-        if(Perfect(i)){
+int countPerfectNumbers(int a, int b) {
+    int count = 0;
+    for (int i = a; i <= b; i++) {
+        if (isPerfectNumber(i)) {
             count++;
         }
-    }return count;
+    }
+    return count;
 }
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    int a,b;
-    scanf("%d %d",&a,&b);
-    Perfect(a,b);
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    int result = countPerfectNumbers(a, b);
+
+    printf("%d ", result);
+
     return 0;
 }
