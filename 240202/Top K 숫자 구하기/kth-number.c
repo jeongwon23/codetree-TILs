@@ -25,6 +25,11 @@ int main() {
     // 입력
     scanf("%d %d", &n, &k);
 
+    if (n <= 0 || k <= 0 || k > n) {
+        printf("Invalid input\n");
+        return 1; // 프로그램 종료
+    }
+
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
@@ -33,7 +38,7 @@ int main() {
     bubbleSort(arr, n);
 
     // 정렬된 배열 출력
-    printf("%d\n", arr[k-1]); // k번째 숫자를 출력
+    printf("%d\n", arr[k - 1]); // k번째 숫자를 출력
 
     return 0;
 }
