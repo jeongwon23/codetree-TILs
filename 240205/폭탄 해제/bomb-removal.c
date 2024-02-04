@@ -2,7 +2,7 @@
 
 typedef struct {
     char code[10];
-    char color[5];
+    char color[2];
     int second;
 } Person;
 
