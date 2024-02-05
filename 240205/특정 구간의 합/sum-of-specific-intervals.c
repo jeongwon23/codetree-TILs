@@ -4,12 +4,14 @@
 
 int A[MAX_SIZE];
 
+// 누적 합을 계산하는 함수
 void calculatePrefixSum(int n) {
     for (int i = 1; i < n; i++) {
         A[i] += A[i - 1];
     }
 }
 
+// 주어진 구간의 합을 계산하는 함수
 int getRangeSum(int a, int b) {
     if (a == 0) {
         return A[b];
