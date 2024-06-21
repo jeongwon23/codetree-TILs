@@ -34,9 +34,9 @@ int main() {
     scanf("%s", str2);
 
     if (areAnagrams(str1, str2))
-        printf("Yes\n");
+        printf("Yes");
     else
-        printf("No\n");
+        printf("No");
 
     return 0;
 }
