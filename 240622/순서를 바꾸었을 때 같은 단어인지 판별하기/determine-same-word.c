@@ -7,17 +7,14 @@ int areAnagrams(char *str1, char *str2) {
     int count2[256] = {0}; // ASCII 문자 빈도수
 
     // 첫 번째 단어의 문자 빈도수 세기
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
-
-    // 두 문자열의 길이가 다른 경우
-    if (len1 != len2)
-        return 0;
-
-    for (int i = 0; i < len1; i++) {
+    for (int i = 0; str1[i] && str2[i]; i++) {
         count1[(unsigned char)str1[i]]++;
         count2[(unsigned char)str2[i]]++;
     }
+
+    // 두 문자열의 길이가 다른 경우
+    if (strlen(str1) != strlen(str2))
+        return 0;
 
     // 두 단어의 문자 빈도수 비교
     for (int i = 0; i < 256; i++) {
@@ -32,12 +29,14 @@ int main() {
     char str1[100];
     char str2[100];
 
-    scanf("%99s\n", str1);  // 버퍼 오버플로우 방지를 위해 길이 제한을 설정
+    scanf("%s\n", str1);
 
-    scanf("%99s", str2);  // 버퍼 오버플로우 방지를 위해 길이 제한을 설정
+    scanf("%s", str2);
 
     if (areAnagrams(str1, str2))
         printf("Yes");
     else
         printf("No");
+
+    return 0;
 }
