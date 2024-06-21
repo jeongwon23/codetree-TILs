@@ -23,7 +23,7 @@ int compare(const void *a, const void *b) {
         return studentB->mom - studentA->mom;
 
     // 영어 점수도 같으면 수학 점수로 비교
-    return studentB->n - studentA->n;
+    return studentA->n - studentB->n;
 }
 
 int main() {
@@ -44,6 +44,7 @@ int main() {
 
     // 정렬 함수 호출 (내림차순으로 정렬)
     qsort(students, n, sizeof(struct Student), compare);
+    
 
     // 정렬된 결과 출력
     for (int i = 0; i < n; i++) {
